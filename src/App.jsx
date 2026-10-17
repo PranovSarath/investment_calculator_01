@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="app">
       <PageHeader title="Investment Calculator" />
-      <DataEntry {...currentState} onInputChange={handleInputChange} />
+      <DataEntry {...currentState} onInputChange={() => handleInputChange()} />
       {investmentResults.length > 0 && (
         <YearlyBreakdown investmentResults={investmentResults} />
       )}
